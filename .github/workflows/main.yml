@@ -36,4 +36,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build the frontend
         run: |
-          docker build coit-frontend -t coitlearning/coit-frontend:latest -f Dockerfile-multistage 
+          docker build coit-frontend -t coitlearning/coit-frontend:latest -f coit-frontend/Dockerfile-multistage 
