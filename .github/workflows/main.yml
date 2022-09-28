@@ -37,3 +37,4 @@ jobs:
       - name: Build the frontend
         run: |
           docker build coit-frontend -t coitlearning/coit-frontend:latest -f coit-frontend/Dockerfile-multistage 
+          docker push coitlearning/coit-frontend:latest
