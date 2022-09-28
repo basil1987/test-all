@@ -29,7 +29,11 @@ jobs:
       - name: Code review with sonarqube
         env:
           API_KEY: ${{ secrets.API_KEY }}
+          SONARSCANNER_VERSION: "4.7.0.2747-linux"
         run: |
+            wget "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONARSCANNER_VERSION.zip"
+            unzip sonar-scanner-cli-$SONARSCANNER_VERSION.zip
+            export PATH=$PATH:$HOME/sonar-scanner-cli-$SONARSCANNER_VERSION/bin
             sonar-scanner \
             -Dsonar.projectKey=frontend \
             -Dsonar.sources=. \
