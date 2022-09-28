@@ -40,7 +40,8 @@ jobs:
             -Dsonar.host.url=http://35.244.8.10:9000 \
             -Dsonar.report.export.path=sonar-report.json \
             -Dsonar.login=$API_KEY
-            cat .scannerwork/sonar-report.json
+            find . -iname sonar-report.json 
+            cat `find . -iname sonar-report.json`
 
       # Look for Dependency Vulnaribility
       - name: Look for dependency vulnaribilities
