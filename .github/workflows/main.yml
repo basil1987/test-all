@@ -28,8 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Login to docker registry
         env:
-          DOCKER_USERNAME: ${secrets.DOCKER_USERNAME}
-          DOCKER_PASSWORD: ${secrets.DOCKER_USERNAME}
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_USERNAME }}
         run: |
           docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
 
