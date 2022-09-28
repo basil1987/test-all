@@ -38,7 +38,6 @@ jobs:
             -Dsonar.projectKey=frontend \
             -Dsonar.sources=. \
             -Dsonar.host.url=http://35.244.8.10:9000 \
-            -Dsonar.analysis.mode=preview \
             -Dsonar.report.export.path=sonar-report.json \
             -Dsonar.login=$API_KEY
             cat .scannerwork/sonar-report.json
