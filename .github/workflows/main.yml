@@ -34,7 +34,7 @@ jobs:
             wget "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONARSCANNER_VERSION.zip"
             unzip sonar-scanner-cli-$SONARSCANNER_VERSION.zip -d $HOME/sonarqube
             cd coit-frontend            
-            $HOME/sonarqube/bin/sonar-scanner \
+            $HOME/sonarqube/sonar-scanner-$SONARSCANNER_VERSION/bin/sonar-scanner \
             -Dsonar.projectKey=frontend \
             -Dsonar.sources=. \
             -Dsonar.host.url=http://35.244.8.10:9000 \
