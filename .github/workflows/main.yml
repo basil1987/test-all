@@ -47,9 +47,7 @@ jobs:
       - name: Look for dependency vulnaribilities
         run: |
             cd coit-frontend
-            find . -iname sonar-report.json 
-            cat `find . -iname sonar-report.json`
-      
+            cat .sonar/sonar-report.json
       # Look for Dependency Vulnaribility
       - name: Look for dependency vulnaribilities
         run: |
