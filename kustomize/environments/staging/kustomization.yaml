@@ -6,6 +6,6 @@ resources:
 
 replicas:
 - name: coit-frontend 
-  count: 10
+  count: 5
 
-namespace: production
+namespace: default

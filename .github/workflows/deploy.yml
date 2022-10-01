@@ -62,7 +62,7 @@ jobs:
 
     - name: Deploy
       run: |-
-        cd coit-application/environments/production
+        cd kustomize/environments/preview
         ../../../kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
         ../../../kustomize build . | kubectl apply -f -
         kubectl get deployments

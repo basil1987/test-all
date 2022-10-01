@@ -8,4 +8,4 @@ replicas:
 - name: coit-frontend 
   count: 10
 
-namespace: production
+namespace: default
